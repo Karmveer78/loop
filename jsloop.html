@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop javascript</title>
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing: border-box;
+        }
+        h1{text-align: center; background-color: brown; color: white;}
+        h2{ font-size: larger;}
+        body{background-color: aquamarine;}
+        main {background-color: aqua; width: 100%;  }
+        div{color: black;
+            float: left;text-align: center;
+            padding: 50px;
+            width: 33.33%; height: 300px;
+           }
+           input{width: 100%; height: 30px; text-align: center;}
+           .halfwidth{width: 130px;}
+        /* p{font-size: larger;} */
+        /* h2{ background-color: #efefef;border-radius: 10px; margin: 2px;
+            box-shadow: -1px -1px 15px 2px white, 1px 1px 15px -5px #001224,
+             inset -15px -15px 15px -20px #000000,inset 5px 5px 15px 5px white;
+        } */
+        button{
+            width: 100%;height: 50px;
+        }
+    </style>
+</head>
+<body>  
+    <h1>loop javascript</h1>
+    <div id="a1">
+        <h2>Natural numbers</h2>
+        <input type="text" id="nat" placeholder="Enter numbers">
+        <button onclick="nn()"><p id="pn"></p></button>
+        <script>
+            function nn() {
+                var i=1;
+                let text = "";
+                var n=document.getElementById("nat").value;n=parseInt(n);
+                while (i<n) {
+                //   document.write(i)
+                text += "" + i + "  ";
+                //  console.log('The sum of natural numbers:', i);
+                    i++;
+                }
+                 document.getElementById("pn").innerHTML=text;
+                // console.log('The sum of natural numbers:', i);
+            }
+        </script>
+    </div>
+    <div id="a2">
+        <h2>Natural numbers in reverse</h2>
+        <input type="text" id="natr" placeholder="Enter numbers">
+        <button onclick="nnr()"><p id="pnr"></p></button>
+        <script>
+            function nnr() {
+                var n,i,text = "";
+                n=document.getElementById("natr").value;i=parseInt(n);
+                while (i>0) {
+                 //   document.write(i)
+                  text += "" + i + "  ";
+                 
+                //  console.log('reverse of natural numbers:', i);
+                    i--;
+                }
+                document.getElementById("pnr").innerHTML=text;
+                // console.log('The sum of natural numbers:', i);
+            }
+        </script>
+
+    </div>
+    <div id="a3">
+        <h2>Natural numbers for loop</h2>
+        <input type="text" id="natf" placeholder="enter number">
+        <button onclick="al()"><p id="alt"></p></button>
+        <script>
+            function al() {
+                var n,i, t="";
+                n=document.getElementById("natf").value;n=parseInt(n);
+                for (let i = 1; i < n; i++) {
+                    t += i +" ";
+                    // console.log('The sum of natural numbers:', i);
+                }
+                document.getElementById("alt").innerHTML=t;
+                // while (i<z) {
+                // //   document.write(i)
+                //     i++;
+                // }
+                // console.log('The sum of natural numbers:', i);
+            }
+        </script>
+    </div>
+    <div id="a4">
+        <h2>alphabets  Big</h2>
+        <button onclick="alp()"><p id="alpo"></p></button>
+        <h2>alphabets Small </h2>
+        <button onclick="alps()"><p id="alpso"></p></button>
+        <script>
+            function alp() {
+               var i,count= 0, ar='';
+              for(i=65;i<=90;i++)
+              {
+                var str =String.fromCharCode(i);
+                // console.log(str);
+                ar+=str+' '
+              }
+                document.getElementById("alpo").innerHTML=ar;
+            }
+            function alps() {
+               var i,count= 0, ar='';
+              for(i=97;i<=122;i++)
+              {
+                var str =String.fromCharCode(i);
+                // console.log(str);
+                ar+=str+'  '
+              }
+                document.getElementById("alpso").innerHTML=ar;
+            }
+        </script>
+        
+    
+
+    </div>
+    <div id="a5">
+        <h2>Natural even numbers</h2>
+        <input type="text" id="nate" placeholder="Enter numbers">
+        <button onclick="nne()"><p id="pne"></p></button>
+        <script>
+            function nne() {
+                var i=1, rus="";
+                var n=document.getElementById("nate").value;n=parseInt(n);
+                while (i<n) {
+                if (i % 2 == 0) {
+                //  document.getElementById("pne").innerHTML=i;
+                 rus += i +" ";
+                //  console.log('even natural numbers:', i);
+                    i++; }
+                    else{ i++;}
+                    document.getElementById("pne").innerHTML=rus;
+                }
+                // console.log('The sum of natural numbers:', i);
+            }
+        </script>
+    </div>
+    <div id="a6">
+        <h2>Natural odd numbers</h2>
+        <input type="text" id="nato" placeholder="Enter numbers">
+        <button onclick="nno()"><p id="pno"></p></button>
+        <script>
+            function nno() {
+                var i=1, r="";
+                var n=document.getElementById("nato").value;n=parseInt(n);
+                while (i<n) {
+                if (i % 2 == 0) { i++; }
+                    else{
+                         r += i+" ";
+                    //   console.log('even natural numbers:', i);
+                        i++;
+                        }
+                }
+                document.getElementById("pno").innerHTML=r;
+                // console.log('The sum of natural numbers:', i);
+            }
+        </script>
+    </div>
+    <div id="a7">
+        <h2>multiplyt numbers table</h2>
+        <input type="text" id="numt" placeholder="Enter numbers">
+        <button onclick="nm()"><p id="numta"></p></button>
+        <script>
+            function nm() {
+                var o,r="";
+                var n=document.getElementById("numt").value;n=parseInt(n);
+                for (let i = 1; i <11; i++) {
+                    o=n*i;
+                    r +=o+" ";
+                    document.getElementById("numta").innerHTML=r;
+                    // console.log('table numbers:', o);
+                }
+            }
+        </script>
+    </div>
+    <div id="a8">
+        <h2>digits count numbers </h2>
+        <input type="text" id="numd" placeholder="Enter numbers">
+        <button onclick="digits_counta()"><p id="numdc"></p></button>
+        <script>
+             function digits_counta() 
+             {
+                 var e;
+                 var  count = 0;
+                  e=document.getElementById("numd").value;
+                  e=parseInt(e);
+                while (e>= 1) {
+                    e /= 10;
+                    count++;
+                }
+                // console.log(count);
+                document.getElementById("numdc").innerHTML=count;
+            }
+            // console.log(digits_count(457));
+        </script>
+    </div>
+    <div id="a9"> 
+        <h2>sum numbers </h2>
+        <input type="text" id="numds" placeholder="enter number">
+        <button onclick="numat()">sum<p id="numto"></p></button>
+        <button onclick="nume()">even<p id="numeo"></p></button>
+        <button onclick="numo()">odd<p id="numoo"></p></button>
+        <script>
+            function numat() {
+                var n, sum=0;
+                n=document.getElementById("numds").value;n=parseInt(n);
+                for (let i = 1; i < n; i++) {
+                    sum = sum+i ;
+                console.log('The sum of natural numbers:', i);
+                }
+                document.getElementById("numto").innerHTML=sum;
+            }
+            function nume() {
+                var n,o, t=0;
+                n=document.getElementById("numds").value;n=parseInt(n);
+                    for (let i = 1; i < n; i++) {
+                        if (i % 2 == 0) {
+                           t += i ; 
+                    console.log('The sum of even num:', i);
+                        }
+                        else{}
+                    }
+                    document.getElementById("numeo").innerHTML=t;
+                    
+                
+            }
+            function numo() {
+                var n,o, t=0;
+                n=document.getElementById("numds").value;n=parseInt(n);
+                
+                  for (let i = 1; i < n; i++) {
+                        if (i % 2 == 0){}
+                        else{
+                          t += i ; 
+                    console.log('The sum of odd num:', i);
+                        }
+                  }
+                document.getElementById("numoo").innerHTML=t;
+               
+            }
+        </script>
+       
+    </div>
+    <div id="a10">
+        <h2>sum of first and last digits</h2>
+        <input type="text" id="numdis" placeholder="enter number">
+        <button onclick="digsun()"><p id="numdiso"></p></button>
+        <script>
+             function digsun() 
+             {
+                 var e,fd,r,l,num,math,count = 0;
+                  e=document.getElementById("numdis").value;
+                  e=parseInt(e);
+                  num=e;
+                  l = e%10;
+                while (e>= 10) {
+                    e /= 10;
+                    count++;
+                }  
+                   // math=num/e/10;
+                    // fd=num/math;
+                     fd=e;
+                    fd=parseInt(fd);
+                    r=fd+l; 
+                    r=parseInt(r);
+                     console.log(fd);console.log(l);console.log(r);
+                
+                document.getElementById("numdiso").innerHTML=r;
+            }
+           
+            // console.log(digits_count(457));
+        </script>
+    </div>
+    <div id="a11">
+        <h2>with argument with return</h2>
+        <input type="text" id="inara" placeholder="enter number">
+        <input type="text" id="inarb" placeholder="enter number">
+        <button onclick="aron()"><p id="outar"></p><p id="outar2"></p><p id="outar3"></p></button>
+        
+        <!--  --><!-- <button ></button> -->
+        <script>
+            function aron() {
+                var a=document.getElementById("inara").value;a=parseInt(a);
+             var b=document.getElementById("inarb").value;b=parseInt(b);
+            var d=are(a,b);
+            document.getElementById("outar").innerHTML=d;
+            //   document.getElementById("outar2").innerHTML=a;
+            //   document.getElementById("outar3").innerHTML=b;
+            }
+            function are(a,b) {
+                var c=a+b;
+                return(c);
+            }
+        </script> 
+    </div>
+    <div id="a12">
+        <h2>switch</h2>
+        <input type="text" id="nums" placeholder="input 1">
+        <input type="text" id="nums2" placeholder="input 2">
+        <input type="text" id="nums3" placeholder="input 3">
+        <button onclick="swthf()"><p id="numout"></p></button>
+        <script>
+            function swthf() {
+                var x, y, z, max;
+                x=document.getElementById("nums").value;x=parseInt(x);
+                y=document.getElementById("nums2").value;y=parseInt(y);
+                z=document.getElementById("nums3").value;z=parseInt(z);
+                max=document.getElementById("numout");
+                switch(x>y){
+                case true: 
+                switch(x>z){
+                    case true: document.getElementById("numout").innerHTML="max number "+x;
+                    break;
+                    case false:document.getElementById("numout").innerHTML="max number "+z;
+                    break;
+                }
+                 break;
+                case false: switch(y>z){
+                    case true: document.getElementById("numout").innerHTML="max number "+y;
+                    break;
+                    case false:document.getElementById("numout").innerHTML= "max number "+z;
+                    break;
+                }
+                break;
+                }
+            }
+        </script>
+    </div>
+    
+</body>
+    <!-- <p>
+        Meant for individuals and small businesses who need a website to display basic information and pictures.
+• Unique & custom design per page, up to 6 pages
+• Building in HTML & CSS
+• Enquiry form on Contact page
+• Free basic level Search Engine Optimization
+• Photo gallery if needed
+• Integration with all your social media pages, such as Facebook and Twitter
+• Domain for One Year
+• Hosting for One year
+• Maintenance For One year
+    </p> -->
+</html>
